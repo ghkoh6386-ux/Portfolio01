@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>ARCHITECT | Editorial Portfolio</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&amp;family=Manrope:wght@200..800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-tint": "#006d3d",
+                        "tertiary-fixed": "#ffd9dc",
+                        "secondary": "#45664e",
+                        "on-tertiary": "#ffffff",
+                        "surface-container-highest": "#e6e2db",
+                        "on-primary-fixed": "#00210f",
+                        "on-tertiary-container": "#fffbff",
+                        "surface-container-low": "#f7f3ec",
+                        "outline": "#6f7a70",
+                        "on-primary": "#ffffff",
+                        "surface-dim": "#dddad3",
+                        "on-tertiary-fixed": "#400010",
+                        "outline-variant": "#becabe",
+                        "surface-container-lowest": "#ffffff",
+                        "on-secondary-fixed": "#00210f",
+                        "on-error-container": "#93000a",
+                        "secondary-container": "#c6ecce",
+                        "on-surface-variant": "#3f4941",
+                        "on-error": "#ffffff",
+                        "error-container": "#ffdad6",
+                        "primary-fixed-dim": "#7ed99e",
+                        "error": "#ba1a1a",
+                        "primary": "#006a3b",
+                        "on-secondary": "#ffffff",
+                        "primary-fixed": "#9af6b8",
+                        "surface-variant": "#e6e2db",
+                        "on-surface": "#1c1c18",
+                        "surface": "#fdf9f2",
+                        "on-primary-container": "#f6fff4",
+                        "tertiary-fixed-dim": "#ffb2b9",
+                        "on-primary-fixed-variant": "#00522d",
+                        "on-background": "#1c1c18",
+                        "on-secondary-fixed-variant": "#2d4e38",
+                        "inverse-surface": "#31302c",
+                        "tertiary": "#973f4c",
+                        "inverse-on-surface": "#f4f0e9",
+                        "on-tertiary-fixed-variant": "#7c2a38",
+                        "tertiary-container": "#b55764",
+                        "secondary-fixed": "#c6ecce",
+                        "background": "#fdf9f2",
+                        "surface-container-high": "#ece8e1",
+                        "surface-container": "#f1ede6",
+                        "surface-bright": "#fdf9f2",
+                        "primary-container": "#268451",
+                        "on-secondary-container": "#4b6c54",
+                        "inverse-primary": "#7ed99e",
+                        "secondary-fixed-dim": "#abcfb3"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0px",
+                        "lg": "0px",
+                        "xl": "0px",
+                        "full": "9999px"
+                    },
+                    "fontFamily": {
+                        "headline": ["Newsreader", "serif"],
+                        "body": ["Manrope", "sans-serif"],
+                        "label": ["Manrope", "sans-serif"]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+        body {
+            background-color: #fdf9f2;
+            color: #1c1c18;
+            overflow-x: hidden;
+        }
+        .text-huge {
+            font-size: clamp(4rem, 15vw, 12rem);
+            line-height: 0.85;
+        }
+        .mask-image {
+            clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+        }
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+    </style>
+</head>
+<body class="font-body selection:bg-primary-fixed selection:text-on-primary-fixed">
+<!-- TopNavBar Navigation Shell -->
+<nav class="fixed top-0 left-0 w-full z-50 flex justify-between items-center px-6 md:px-10 py-8 max-w-[1920px] mx-auto bg-[#fdf9f2] dark:bg-[#1c1c18] transition-colors duration-500 no-line">
+<div class="text-2xl font-serif font-medium tracking-tighter text-[#1c1c18] dark:text-[#fdf9f2] uppercase font-serif italic">ARCHITECT</div>
+<div class="hidden md:flex gap-12 items-center">
+<a class="text-[#1c1c18] dark:text-[#fdf9f2] opacity-60 hover:opacity-100 transition-opacity duration-300 font-sans font-light tracking-wide text-sm uppercase" href="#projects">Archive</a>
+<a class="text-[#1c1c18] dark:text-[#fdf9f2] opacity-60 hover:opacity-100 transition-opacity duration-300 font-sans font-light tracking-wide text-sm uppercase" href="#journal">Journal</a>
+<a class="text-[#006a3b] dark:text-[#268451] border-b-2 border-[#006a3b] pb-1 font-sans font-light tracking-wide text-sm uppercase" href="#contact">CONTACT</a>
+</div>
+<div class="md:hidden">
+<span class="material-symbols-outlined text-on-surface">menu</span>
+</div>
+</nav>
+<main class="pt-32">
+<!-- Section 1: Hero -->
+<section class="min-h-screen flex flex-col justify-center px-6 md:px-10 lg:px-20 mb-32">
+<div class="max-w-[1400px] w-full">
+<span class="block font-label text-xs tracking-[0.4em] uppercase mb-8 opacity-40">Digital Portfolio / 2024</span>
+<h1 class="text-huge font-headline italic tracking-tighter mb-12">
+                    Visualizing <br/>
+<span class="pl-0 md:pl-32">Structural</span> <br/>
+<span class="text-primary italic">Narratives.</span>
+</h1>
+<div class="flex justify-end">
+<p class="max-w-xl font-headline text-3xl md:text-4xl leading-tight italic tracking-tight text-on-surface-variant">
+                        Crafting digital spaces where content dictates form and architecture serves intention.
+                    </p>
+</div>
+</div>
+</section>
+<!-- Section 2: Intro -->
+<section class="px-6 md:px-10 lg:px-20 mb-64 overflow-hidden">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-10">
+<div class="md:col-start-2 md:col-span-8">
+<p class="font-headline text-4xl md:text-6xl leading-[1.1] tracking-tighter">
+                        We reject the density of <span class="text-primary-container/20">modern interfaces</span> in favor of the rhythmic, intentional pacing of a physical publication.
+                    </p>
+</div>
+<div class="md:col-start-6 md:col-span-6 mt-12 md:mt-0">
+<p class="font-body text-lg font-light leading-relaxed opacity-80 max-w-md">
+                        Every project is a singular composition. By utilizing extreme white space and intentional asymmetry, we guide the eye through content without the crutch of traditional UI chrome.
+                    </p>
+</div>
+</div>
+</section>
+<!-- Section 3: Projects (Asymmetrical Composition) -->
+<section class="px-6 md:px-10 lg:px-20 mb-64" id="projects">
+<div class="flex items-baseline justify-between mb-24">
+<h2 class="font-headline text-7xl italic tracking-tighter">Selected Works</h2>
+<span class="font-label text-xs tracking-widest uppercase opacity-40">01 — 05</span>
+</div>
+<!-- Project 1: Editorial UI -->
+<div class="grid grid-cols-1 md:grid-cols-12 gap-0 mb-64 group">
+<div class="md:col-span-7 overflow-hidden bg-surface-container-high aspect-[4/5] relative">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="Minimalist magazine layout on a tablet showing clean typography, large white spaces, and high-fashion photography in a studio setting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDN3Qc9a_dDQRVnTIHzj3-oiBYi5-KBFlPSqy-wHXGm8cGQK5u_A_sfTs7dxr23mxxm2phTQchus8IxmSlSy49_x_HjWi6Qwj-JbStyigw3ez16didLiT71RLsYCaFYumk1CdCZcpfTXpfJSZzBNmDRgn0MDHuH9Gz97KlnvN6h8PWnpp4Qj356YtcTlNOSTQ1_sezYt2mP925NIrGpGXSqqZq-bLSqAlNnas35gOW7M56GW-ExPsAMqkLUafQRybCqFu8SwotimfI"/>
+<div class="absolute inset-0 bg-primary/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+</div>
+<div class="md:col-span-5 md:pl-20 pt-12 flex flex-col justify-end pb-12">
+<span class="font-label text-xs tracking-widest uppercase mb-4 text-primary">01 / Digital Editorial</span>
+<h3 class="font-headline text-5xl mb-6">Editorial UI</h3>
+<p class="font-body font-light mb-8 opacity-70 leading-relaxed">
+                        A bespoke digital magazine project focused on high-contrast storytelling and fluid typography. Designed to feel like a premium physical publication.
+                    </p>
+<a class="inline-flex items-center gap-4 group/link" href="#">
+<span class="font-headline text-xl italic border-b-2 border-primary pb-1">View Case Study</span>
+<span class="material-symbols-outlined transition-transform group-hover/link:translate-x-2">arrow_forward</span>
+</a>
+</div>
+</div>
+<!-- Project 2: Performance UI -->
+<div class="grid grid-cols-1 md:grid-cols-12 gap-0 mb-64 group items-center">
+<div class="md:col-span-4 order-2 md:order-1 pt-12 md:pt-0">
+<span class="font-label text-xs tracking-widest uppercase mb-4 text-primary">02 / Entertainment</span>
+<h3 class="font-headline text-5xl mb-6">Performance UI</h3>
+<p class="font-body font-light mb-8 opacity-70 leading-relaxed">
+                        Dynamic interface design for BabyMonster's interactive platform, merging high-performance visuals with seamless user interaction.
+                    </p>
+<div class="flex gap-4">
+<span class="px-4 py-1 bg-surface-container-high text-[10px] uppercase tracking-widest font-label">React</span>
+<span class="px-4 py-1 bg-surface-container-high text-[10px] uppercase tracking-widest font-label">WebGL</span>
+</div>
+</div>
+<div class="md:col-span-8 order-1 md:order-2 md:pl-20 overflow-hidden aspect-video bg-surface-container-low">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="Dynamic abstract light patterns in deep green and silver, evoking high-energy performance and modern digital stage production." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDRJmbCmmKLcXMnu09q9XjesgBL5sug4fyVG3n_V0jWJ2FYFKIaBZwxEvu5rlZ55iIkT4QLMadVMrt8XskRR-YbNKP3VNFRYfAi67_Q9ZCoW56s5W_CxQc4NNqy05M0P_PFOihT8XU78yobnITca0-UOaHaXQ0NO5xz3E69QPvSYYxNmrOGz5DQnqmS26J0K0bX8AfeIKkQCj1fJy5TpoGWfhw2Unb4BuYGCVUDq6kHxE_TJtUND6Z34CqBoydAxO2njhm5ChlHJZI"/>
+</div>
+</div>
+<!-- Project 3: Community UI -->
+<div class="grid grid-cols-1 md:grid-cols-12 gap-0 mb-64 group">
+<div class="md:col-start-3 md:col-span-6 overflow-hidden bg-surface-container-highest aspect-square">
+<img class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700" data-alt="Interior of a modern community space with warm wood textures, large glass windows, and people collaborating in a bright, airy environment." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAsjprUyOKHfC2jiB2tmBrh2Tos99yBr8frEsd5GRS2pbnnLdzv2t5GCrxgjIVOo4HWVv3PuNyAaiICiQ78I89Uw8Kip4o6JiBy1s_Bxu-N5xCKU2faEYK77Tl74BlRX9cV4lLRUXDsPm_kSGzWke2_ZC5sbWa2ZmUEltx8cjUER9-zY10VEvaDAQAkxqFVG7yuof7RnqWKd2pmPLG5XbvJAif2dsNQXWmq3j22Rr6NmaZF24Wber0VGcdTBfg_q65s_PEixD5aZxk"/>
+</div>
+<div class="md:col-span-4 pt-12 flex flex-col justify-center">
+<div class="md:-ml-20 bg-surface p-12 shadow-2xl shadow-on-surface/5">
+<span class="font-label text-xs tracking-widest uppercase mb-4 text-primary">03 / Social Engagement</span>
+<h3 class="font-headline text-5xl mb-6">Community UI</h3>
+<p class="font-body font-light mb-0 opacity-70 leading-relaxed">
+                            A Santa project initiative connecting local artisans through a minimalist peer-to-peer exchange platform.
+                        </p>
+</div>
+</div>
+</div>
+<!-- Project 4 & 5: Smaller Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-20">
+<div class="group">
+<div class="aspect-[16/10] bg-surface-container mb-8 overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Close-up of a designer's desk with a minimalist mechanical keyboard and a high-resolution screen showing complex Figma design components." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAkzt389e-x6NVUgMFkrAe41V25ATmPcs11KO0HjoYhShmBHa0CSZ5H201vr7V_GelW1n7n0wTwUxtOQOObYsRnjMv8Xj3g7xbv72D6vULF9XfyI7WRpkgS9xcNdi89O7TiTds7JkRU_G7f1grHgH-G8YAvap-ZTXmRmEEcV7Ljjz4dw0Q7CsGvEVdyo41wMSWDJNHX_uORFtU-jZ9ibebUt4g8rWcT3ky_rNL4rO5uXdAC9oO5k8uS0jbQVoLpx84OSLdwQsB5p_E"/>
+</div>
+<span class="font-label text-xs tracking-widest uppercase opacity-40">04 / Product</span>
+<h3 class="font-headline text-3xl mt-2">UI Design (Figma)</h3>
+</div>
+<div class="group pt-20">
+<div class="aspect-[16/10] bg-surface-container mb-8 overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Black and white cinematic shot of a vintage movie camera on a tripod in an empty minimalist room with soft natural lighting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBGuzDjm_xe--Z2uCrLKcb8Y9MzblAkARLZU-Em43z42G2UEROvTjgL1CCVcwfOaH0lILAkcYWwSeMpUTxW7QyFo7H1aBoatnlecVFf4Ru-gRDR5dBg7YCFVVJI1-cUsRORyL0AWWzaMXOnUITr6jtAgEPq7orkDHDsi8e9tryF3R4X9q8KyEajDBcjjPpar6em2BqBUmiK7cNOdTIL96ip6ZWLu8bbWxDhGB9EGbIJsHOOHh4QQ24Fi_wjWEEediw7BnQuyjxLmcU"/>
+</div>
+<span class="font-label text-xs tracking-widest uppercase opacity-40">05 / Utility</span>
+<h3 class="font-headline text-3xl mt-2">Other Projects</h3>
+<p class="font-body text-sm font-light mt-4 opacity-60">Movie API, Pages &amp; Places</p>
+</div>
+</div>
+</section>
+<!-- Section 4: Skills -->
+<section class="bg-surface-container-high py-32 px-6 md:px-10 lg:px-20">
+<div class="max-w-[1400px] mx-auto flex flex-col md:flex-row justify-between gap-20">
+<div class="md:w-1/3">
+<h2 class="font-headline text-6xl italic tracking-tighter mb-8">Expertise</h2>
+<p class="font-body font-light opacity-60">Building the structural foundation for modern digital experiences.</p>
+</div>
+<div class="md:w-2/3 grid grid-cols-2 md:grid-cols-3 gap-y-16 gap-x-8">
+<div>
+<span class="font-label text-[10px] tracking-[0.2em] uppercase opacity-40 block mb-6">01 / Strategy</span>
+<ul class="space-y-4 font-headline text-2xl italic">
+<li>Visual Direction</li>
+<li>UX Architecture</li>
+<li>Editorial Design</li>
+</ul>
+</div>
+<div>
+<span class="font-label text-[10px] tracking-[0.2em] uppercase opacity-40 block mb-6">02 / Technical</span>
+<ul class="space-y-4 font-headline text-2xl italic">
+<li>React / Next.js</li>
+<li>Tailwind CSS</li>
+<li>Motion Design</li>
+</ul>
+</div>
+<div>
+<span class="font-label text-[10px] tracking-[0.2em] uppercase opacity-40 block mb-6">03 / Tooling</span>
+<ul class="space-y-4 font-headline text-2xl italic">
+<li>Figma</li>
+<li>Adobe Suite</li>
+<li>Cinema 4D</li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+<!-- Section 5: Contact -->
+<section class="min-h-[819px] flex flex-col justify-center items-center text-center px-6 md:px-10 py-32" id="contact">
+<span class="font-label text-xs tracking-[0.4em] uppercase mb-12 opacity-40">Ready to collaborate?</span>
+<h2 class="text-6xl md:text-9xl font-headline italic tracking-tighter mb-16 hover:text-primary transition-colors duration-500 cursor-pointer">
+                hello@architect.com
+            </h2>
+<div class="flex flex-wrap justify-center gap-12">
+<a class="font-label text-sm tracking-widest uppercase hover:text-primary transition-colors" href="#">Instagram</a>
+<a class="font-label text-sm tracking-widest uppercase hover:text-primary transition-colors" href="#">LinkedIn</a>
+<a class="font-label text-sm tracking-widest uppercase hover:text-primary transition-colors" href="#">Twitter</a>
+<a class="font-label text-sm tracking-widest uppercase hover:text-primary transition-colors" href="#">Dribbble</a>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full px-10 py-20 flex flex-col md:flex-row items-center justify-between gap-8 bg-[#ece8e1] dark:bg-[#121212] transition-opacity duration-300">
+<div class="font-sans text-[10px] tracking-[0.2em] uppercase Manrope text-[#1c1c18] dark:text-[#fdf9f2] opacity-60">
+            © 2024 Editorial Architecturalism. All rights reserved.
+        </div>
+<div class="flex gap-12">
+<a class="font-sans text-[10px] tracking-[0.2em] uppercase Manrope text-[#1c1c18] dark:text-[#fdf9f2] opacity-60 hover:text-[#006a3b] transition-colors" href="#">Journal</a>
+<a class="font-sans text-[10px] tracking-[0.2em] uppercase Manrope text-[#1c1c18] dark:text-[#fdf9f2] opacity-60 hover:text-[#006a3b] transition-colors" href="#">Archive</a>
+<a class="font-sans text-[10px] tracking-[0.2em] uppercase Manrope text-[#1c1c18] dark:text-[#fdf9f2] opacity-60 hover:text-[#006a3b] transition-colors" href="#">Index</a>
+</div>
+</footer>
+<!-- Fixed corner anchors for poster-like frame -->
+<div class="fixed top-8 left-10 z-[60] mix-blend-difference hidden xl:block">
+<span class="font-label text-[10px] tracking-[0.4em] uppercase text-surface-container-lowest">Vol. 01 Edition</span>
+</div>
+<div class="fixed bottom-8 left-10 z-[60] mix-blend-difference hidden xl:block">
+<span class="font-label text-[10px] tracking-[0.4em] uppercase text-surface-container-lowest">Portfolio</span>
+</div>
+<div class="fixed bottom-8 right-10 z-[60] mix-blend-difference hidden xl:block">
+<span class="font-label text-[10px] tracking-[0.4em] uppercase text-surface-container-lowest">London / UK</span>
+</div>
+</body></html>

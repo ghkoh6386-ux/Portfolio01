@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Editorial UI - ARCHIVE</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&amp;family=Manrope:wght@200..800&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-tertiary": "#ffffff",
+                    "surface-container": "#f1ede6",
+                    "primary-fixed-dim": "#7ed99e",
+                    "secondary-fixed": "#c6ecce",
+                    "on-surface-variant": "#3f4941",
+                    "on-tertiary-fixed": "#400010",
+                    "inverse-primary": "#7ed99e",
+                    "surface-tint": "#006d3d",
+                    "tertiary-fixed": "#ffd9dc",
+                    "on-secondary": "#ffffff",
+                    "secondary-container": "#c6ecce",
+                    "outline": "#6f7a70",
+                    "surface-bright": "#fdf9f2",
+                    "inverse-on-surface": "#f4f0e9",
+                    "surface": "#fdf9f2",
+                    "outline-variant": "#becabe",
+                    "on-tertiary-fixed-variant": "#7c2a38",
+                    "on-error": "#ffffff",
+                    "surface-container-low": "#f7f3ec",
+                    "on-secondary-container": "#4b6c54",
+                    "surface-container-high": "#ece8e1",
+                    "on-background": "#1c1c18",
+                    "surface-variant": "#e6e2db",
+                    "secondary-fixed-dim": "#abcfb3",
+                    "primary-container": "#268451",
+                    "inverse-surface": "#31302c",
+                    "surface-dim": "#dddad3",
+                    "on-secondary-fixed-variant": "#2d4e38",
+                    "tertiary-fixed-dim": "#ffb2b9",
+                    "on-primary": "#ffffff",
+                    "error": "#ba1a1a",
+                    "tertiary": "#973f4c",
+                    "on-error-container": "#93000a",
+                    "on-tertiary-container": "#fffbff",
+                    "on-surface": "#1c1c18",
+                    "surface-container-highest": "#e6e2db",
+                    "primary": "#006a3b",
+                    "background": "#fdf9f2",
+                    "surface-container-lowest": "#ffffff",
+                    "on-primary-container": "#f6fff4",
+                    "on-primary-fixed-variant": "#00522d",
+                    "on-primary-fixed": "#00210f",
+                    "primary-fixed": "#9af6b8",
+                    "error-container": "#ffdad6",
+                    "on-secondary-fixed": "#00210f",
+                    "tertiary-container": "#b55764",
+                    "secondary": "#45664e"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0px",
+                    "lg": "0px",
+                    "xl": "0px",
+                    "full": "9999px"
+            },
+            "fontFamily": {
+                    "headline": ["Newsreader", "serif"],
+                    "body": ["Manrope", "sans-serif"],
+                    "label": ["Manrope", "sans-serif"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body {
+            background-color: #fdf9f2;
+            color: #1c1c18;
+            -webkit-font-smoothing: antialiased;
+        }
+        .editorial-underline {
+            position: relative;
+        }
+        .editorial-underline::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: -4px;
+            width: 100%;
+            height: 2px;
+            background-color: #006a3b;
+        }
+    </style>
+</head>
+<body class="font-body selection:bg-primary/20 selection:text-primary">
+<!-- TopAppBar Shell -->
+<nav class="bg-[#fdf9f2] dark:bg-stone-950 full-width top-0 sticky no-line tonal-shift bg-[#f7f3ec] dark:bg-stone-900 z-50">
+<div class="flex justify-between items-center px-20 py-8 w-full max-w-[1920px] mx-auto">
+<div class="font-['Newsreader'] font-bold text-3xl tracking-tighter text-[#1c1c18] dark:text-[#ece8e1] cursor-pointer ease-in-out">ARCHIVE</div>
+<div class="hidden md:flex gap-12 font-['Newsreader'] italic text-2xl tracking-tight">
+<a class="text-[#006a3b] dark:text-[#268451] border-b-2 border-[#006a3b] pb-1 cursor-pointer ease-in-out" href="#">Projects</a>
+<a class="text-[#1c1c18] dark:text-[#ece8e1] opacity-70 hover:opacity-100 transition-opacity duration-300 cursor-pointer ease-in-out" href="#">Studio</a>
+<a class="text-[#1c1c18] dark:text-[#ece8e1] opacity-70 hover:opacity-100 transition-opacity duration-300 cursor-pointer ease-in-out" href="#">Contact</a>
+</div>
+<div class="cursor-pointer ease-in-out">
+<span class="material-symbols-outlined text-[#1c1c18] dark:text-[#ece8e1]">menu</span>
+</div>
+</div>
+</nav>
+<main class="max-w-[1920px] mx-auto overflow-hidden">
+<!-- Hero Section -->
+<section class="px-20 pt-24 pb-40 grid grid-cols-12 gap-8 items-end">
+<div class="col-span-12 lg:col-span-7">
+<span class="font-label uppercase tracking-widest text-xs font-bold text-primary mb-6 block">Featured Case Study</span>
+<h1 class="font-headline text-[9rem] leading-[0.85] tracking-tighter italic font-extrabold mb-8">Editorial UI</h1>
+<p class="font-headline text-3xl max-w-xl text-on-surface-variant italic">Rejecting digital noise for the rhythmic, intentional pacing of a physical art publication.</p>
+</div>
+<div class="col-span-12 lg:col-span-5 relative">
+<div class="aspect-[4/5] bg-surface-container overflow-hidden group">
+<img alt="iPhone mockup" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="Modern smartphone showing a minimalist editorial layout on its screen against a clean studio background with soft dramatic shadows" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCUuHuZAcHjIxPzlFc--cEH8KogjQHf9ylYZxcdDdsZb9T19KzHJFkYooXR5KutWYGqh4PkEESc3eC75ITk72SuIa9QcnbEBhdvS2Z9PPCAF78yBFU8KH-HZkqMoLCA2rMy8UmeZM7VuXTUpeeW0jK4bH0Sr9XlmS0fJUSbgisrKiE2twsIJozynQ-PZ0lrKuVmim2UUWNsTbrEzDnRRuMy2SXzWZg0l7KmydJc1ap9Cp2NiLp7mCGRH73wQb_r1WGEI1OjzeAYjfw"/>
+</div>
+</div>
+</section>
+<!-- Project Overview & Tech Stack -->
+<section class="px-20 py-32 bg-surface-container-low grid grid-cols-12 gap-16">
+<div class="col-span-12 lg:col-span-4 border-l border-outline-variant/20 pl-8 h-fit">
+<h3 class="font-label uppercase tracking-widest text-xs font-bold mb-4 opacity-50 text-on-surface">Overview</h3>
+<p class="font-body text-lg leading-relaxed">Editorial UI is a conceptual design system that prioritizes composition over conventional UX patterns, creating a gallery-like browsing experience for long-form content.</p>
+</div>
+<div class="col-span-12 lg:col-span-4 border-l border-outline-variant/20 pl-8 h-fit">
+<h3 class="font-label uppercase tracking-widest text-xs font-bold mb-4 opacity-50 text-on-surface">Tech Stack</h3>
+<ul class="font-body text-lg space-y-2">
+<li>React.js</li>
+<li>Tailwind CSS</li>
+<li>Framer Motion</li>
+</ul>
+</div>
+<div class="col-span-12 lg:col-span-4 border-l border-outline-variant/20 pl-8 h-fit">
+<h3 class="font-label uppercase tracking-widest text-xs font-bold mb-4 opacity-50 text-on-surface">Role</h3>
+<p class="font-body text-lg">Lead Designer &amp; Developer</p>
+</div>
+</section>
+<!-- Asymmetric Body: The Challenge & The Solution -->
+<section class="px-20 py-48 grid grid-cols-12 gap-y-32">
+<!-- Challenge -->
+<div class="col-span-12 lg:col-span-5">
+<h2 class="font-headline text-6xl italic mb-12 leading-tight">The Loss of Pacing</h2>
+</div>
+<div class="col-span-12 lg:col-span-6 lg:col-start-7">
+<p class="font-body text-xl leading-relaxed mb-12 text-on-surface-variant">Modern interfaces suffer from a relentless density. By maximizing "functional density," we've lost the rhythm that makes reading a physical magazine pleasurable. Our challenge was to re-introduce the pause.</p>
+<div class="aspect-video bg-surface-container-high overflow-hidden">
+<img alt="Pacing visual" class="w-full h-full object-cover" data-alt="Abstract minimalist scene featuring a single geometric sculpture in a vast empty white gallery space with long soft shadows" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBITx5ANGEHoPu_ksYQf3SEdayRAgeK-kJ6enWaoX8uV5OibRAL4Rn-1sXit8W8FPjApmQxC6D7N0-_Cpt8Yokfnke4vhLz0GncTmEez0zAy6x4If779g-Bv3wvhXWHvf1pzEF_sUNaqdMRyxdpvA-SItAOGQGFYIhyZEKqVMZKLFe_TY6Ou-YSWUmoAWX7J_fWeEwLygN8hxrH-xehirlgU3jzM06AJji37iHCX7vDNic055ot9JPKDA_CThaDpAcqvsnryVKskDU"/>
+</div>
+</div>
+<!-- Solution -->
+<div class="col-span-12 lg:col-span-8">
+<h2 class="font-headline text-[7rem] leading-none tracking-tighter italic mb-12">Intentional Voids</h2>
+<div class="grid grid-cols-2 gap-16 items-start">
+<div class="aspect-[3/4] bg-surface-container overflow-hidden">
+<img alt="Structural void" class="w-full h-full object-cover" data-alt="Macro photography of clean white architectural paper with sharp shadows and subtle textures showing geometric folds" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDxe2aTXftMOq4OLPhZeBl2GEedKQLL_jtdFvlRCibrhOPJHtGxt0K8c2VUjIu4L8uv69vRks3EvoNftaVeFYm2h2hEVIqVw-VEw4SPzkEP_fs9gfhpVT8GM_xP0JE9B7knnu-S-9VJReGuw-nk7forI8mBaAUpV8jMR6xN7lC5TP0uCinCXgm0W6eNSc-WvdctNs59r_3kUMi942lrCtpHXADLZobhRtr7sGrOoJ1Y2CgaNG52p5_sVEKnuEYUiW17yb5AoTPwEJw"/>
+</div>
+<div class="pt-24">
+<p class="font-body text-xl leading-relaxed text-on-surface-variant">We used scale as an architectural marker. By creating massive gaps between headlines and body copy, we created a "compositional tension" that naturally guides the eye without relying on heavy UI borders or navigation bars.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Implementation -->
+<section class="px-20 py-48 bg-surface-container-highest">
+<div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-24">
+<div>
+<span class="font-headline text-5xl italic text-primary block mb-8">01</span>
+<h4 class="font-label uppercase tracking-widest text-xs font-bold mb-6">Tokenized Voids</h4>
+<p class="font-body text-lg leading-relaxed text-on-surface-variant">A strictly enforced spacing system that prioritizes white space over content density.</p>
+</div>
+<div>
+<span class="font-headline text-5xl italic text-primary block mb-8">02</span>
+<h4 class="font-label uppercase tracking-widest text-xs font-bold mb-6">Typographic Rigor</h4>
+<p class="font-body text-lg leading-relaxed text-on-surface-variant">The massive contrast between Newsreader Display and Manrope Sans defines the information hierarchy.</p>
+</div>
+<div>
+<span class="font-headline text-5xl italic text-primary block mb-8">03</span>
+<h4 class="font-label uppercase tracking-widest text-xs font-bold mb-6">Silk Gradients</h4>
+<p class="font-body text-lg leading-relaxed text-on-surface-variant">Subtle, non-distracting 135-degree gradients that provide a tactile, paper-like finish.</p>
+</div>
+</div>
+</section>
+<!-- Outcome Metrics -->
+<section class="px-20 py-64 flex flex-col md:flex-row items-center justify-between gap-32">
+<div class="text-center md:text-left">
+<h5 class="font-label uppercase tracking-widest text-xs font-bold mb-4 opacity-50">Increased Engagement</h5>
+<span class="font-headline text-[10rem] leading-none italic font-bold tracking-tighter">45%</span>
+<p class="font-headline text-2xl italic mt-4">average read time increase</p>
+</div>
+<div class="text-center md:text-left">
+<h5 class="font-label uppercase tracking-widest text-xs font-bold mb-4 opacity-50">Global Reach</h5>
+<span class="font-headline text-[10rem] leading-none italic font-bold tracking-tighter">12k+</span>
+<p class="font-headline text-2xl italic mt-4">curated monthly readers</p>
+</div>
+</section>
+<!-- Quote Section -->
+<section class="px-20 py-48 bg-primary text-on-primary">
+<div class="max-w-5xl mx-auto">
+<span class="material-symbols-outlined text-6xl mb-12" style="font-variation-settings: 'FILL' 1;">format_quote</span>
+<blockquote class="font-headline text-6xl italic leading-tight mb-16">"Editorial UI isn't just about beauty; it's about reclaiming the digital canvas for thought-provoking, deep-reading experiences."</blockquote>
+<div class="flex items-center gap-6">
+<div class="w-16 h-16 bg-on-primary/10 overflow-hidden">
+<img alt="Aris Thorne" class="w-full h-full object-cover grayscale" data-alt="Portrait of a sophisticated creative professional man with glasses in black and white studio lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAv6-X30ayTn2mfPgev0Z-Asnoqijlv8M4X6yRjJ7nFG2DvQqeFkBBP2UoOL2cCdqlfDmS38kr4EWrE4SEO_i-o-O7THfm3aZPv1jq5S6KzYv9PiFL9WZv28VKykmckQ0cGP9B26sQmtSdD41_dJ2U6PdZx7J5J4V-_X2_1ovvpjF5bJDZWjBgPutkSEgRQFzB1tUncoU_ScdM0z97AEpYYwzYexS7rfeCQ3vU8A_Gafm5u8I7uKBmIgmayyu9P3hZIy6EeCiqHPkI"/>
+</div>
+<div>
+<p class="font-label font-bold uppercase tracking-widest text-sm">Aris Thorne</p>
+<p class="font-body opacity-70">Design Director at The Fine Press</p>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer Shell -->
+<footer class="bg-[#ece8e1] dark:bg-stone-900 full-width border-0 tonal-shift from surface to surface-container-high">
+<div class="flex flex-col md:flex-row justify-between items-end px-20 py-24 w-full">
+<div class="flex flex-col gap-8 mb-16 md:mb-0">
+<div class="font-['Newsreader'] text-xl italic text-[#1c1c18] dark:text-[#ece8e1]">Editorial Architecturalism Portfolio</div>
+<div class="font-['Manrope'] uppercase tracking-widest text-xs font-bold text-[#1c1c18] dark:text-[#ece8e1]">
+                    © 2024 Editorial Architecturalism Portfolio
+                </div>
+</div>
+<div class="flex flex-col items-end gap-6 font-['Manrope'] uppercase tracking-widest text-xs font-bold">
+<a class="text-[#006a3b] dark:text-[#268451] underline-offset-8 hover:underline decoration-2 transition-colors duration-300" href="#">Next Project: The Glass Pavilion</a>
+<a class="text-[#1c1c18] dark:text-[#ece8e1] hover:text-[#006a3b] underline-offset-8 hover:underline decoration-2 transition-colors duration-300" href="#">Index</a>
+<a class="text-[#1c1c18] dark:text-[#ece8e1] hover:text-[#006a3b] underline-offset-8 hover:underline decoration-2 transition-colors duration-300" href="#">Back to Top</a>
+</div>
+</div>
+</footer>
+</body></html>

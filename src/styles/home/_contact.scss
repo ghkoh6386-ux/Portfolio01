@@ -1,0 +1,48 @@
+@use '../variables' as *;
+
+.contact-section {
+  min-height: 52rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 6rem 1.5rem;
+  text-align: center;
+
+  &__mail {
+    font-family: $newsreader;
+    font-size: clamp(3rem, 8vw, 7rem);
+    font-style: normal;
+    letter-spacing: -0.05em;
+    transition: color 0.35s ease;
+
+    &:hover {
+      color: $primary;
+    }
+  }
+
+  &__links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 3rem;
+    margin-top: 4rem;
+
+    a {
+      font-size: 0.78rem;
+      letter-spacing: 0.24em;
+      text-transform: uppercase;
+
+      &:hover {
+        color: $primary;
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .contact-section {
+    min-height: auto;
+    padding: 5rem 1rem;
+  }
+}
