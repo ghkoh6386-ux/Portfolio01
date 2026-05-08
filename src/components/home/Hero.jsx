@@ -31,7 +31,7 @@ export default function Hero() {
             <div className="home-hero__aside-copy">
               <div className="home-hero__meta">
                 <span>Portfolio</span>
-                <span>UI / Front-end</span>
+                <span>UI / Web Publisher</span>
                 <span>2026</span>
               </div>
               <p>
