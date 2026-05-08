@@ -118,7 +118,21 @@
     }
 
     &__grid {
-      grid-template-columns: 1fr;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 1rem;
+    }
+
+    &__column {
+      padding: 1.2rem 1rem 1.4rem;
+
+      span {
+        margin-bottom: 1.1rem;
+        font-size: 0.62rem;
+      }
+    }
+
+    &__column li {
+      font-size: clamp(1.15rem, 3.5vw, 1.45rem);
     }
   }
 }

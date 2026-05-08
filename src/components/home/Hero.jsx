@@ -34,10 +34,7 @@ export default function Hero() {
                 <span>UI / Web Publisher</span>
                 <span>2026</span>
               </div>
-              <p>
-                다양한 컨셉과 사용자 경험을 바탕으로 프로젝트마다 어울리는 화면을
-                구현합니다.
-              </p>
+              <p>프로젝트마다 어울리는 화면과 흐름을 구현합니다.</p>
             </div>
           </div>
         </div>
