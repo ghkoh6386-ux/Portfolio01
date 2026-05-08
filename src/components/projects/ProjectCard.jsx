@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom'
 
 export default function ProjectCard({ project, variant = 'feature', index }) {
-  const imageSrc = project.heroImage ?? project.thumbnail
+  const imageSrc = project.thumbnail ?? project.heroImage
   const description = project.shortDescription ?? project.overview?.description ?? ''
   const isPlaceholder = Boolean(project.isPlaceholder)
   const cardClassName = `project-card project-card--small project-card--small-${index}${

@@ -1,85 +1,127 @@
 @use '../variables' as *;
 
 .home-intro {
-  padding: 0 1.5rem 13rem;
+  padding: 0 1.5rem 11rem;
 
   &__inner {
     width: min(1360px, 100%);
     margin: 0 auto;
-    padding-top: 4.5rem;
+    padding-top: 2.4rem;
     border-top: 1px solid rgba($line, 0.45);
     display: grid;
-    grid-template-columns: minmax(0, 0.95fr) minmax(0, 1.25fr);
-    gap: 4.5rem;
+    grid-template-columns: minmax(0, 0.98fr) minmax(0, 1.02fr);
+    gap: 2.2rem;
     align-items: start;
   }
 
   &__intro {
-    padding-top: 1rem;
+    padding-top: 0.1rem;
+    position: relative;
+    z-index: 1;
   }
 
   &__statement {
-    max-width: 10ch;
+    max-width: 18ch;
     margin: 0;
-    font-family: $newsreader;
-    font-size: clamp(2.3rem, 4.2vw, 4rem);
-    line-height: 1.16;
-    letter-spacing: -0.035em;
+    font-family: $korean-display;
+    font-size: clamp(1.75rem, 2.7vw, 2.45rem);
+    font-weight: 300;
+    line-height: 1.24;
+    letter-spacing: -0.025em;
     word-break: keep-all;
   }
 
   &__panel {
-    display: grid;
-    grid-template-columns: minmax(220px, 0.82fr) minmax(0, 1fr);
-    gap: 2.5rem;
-    align-items: end;
-    padding: 1.1rem 0 0;
-  }
-
-  &__media {
-    position: relative;
-  }
-
-  &__portrait-frame {
-    aspect-ratio: 4 / 5;
-    overflow: hidden;
-    border: 1px solid rgba($line, 0.72);
-    background: linear-gradient(180deg, rgba(236, 232, 225, 0.2), rgba(236, 232, 225, 0.82));
-
-    img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
+    display: block;
+    padding: 0;
+    margin-left: 0;
+    padding-top: 2.55rem;
   }
 
   &__content {
-    padding-bottom: 0.4rem;
+    max-width: 34rem;
+    padding: 0;
 
     p {
-      max-width: 27rem;
+      max-width: 31rem;
       margin: 0;
-      color: $text-soft;
-      font-size: 1rem;
-      line-height: 1.95;
+      color: $text-muted;
+      font-size: 1.05rem;
+      line-height: 1.98;
       word-break: keep-all;
     }
   }
 
   &__notes {
+    position: relative;
     display: flex;
     flex-wrap: wrap;
-    gap: 0.85rem 1.5rem;
-    margin-top: 1.9rem;
-    padding-top: 1.4rem;
-    border-top: 1px solid rgba($line, 0.45);
+    gap: 0.85rem 1.25rem;
+    margin-top: 2rem;
+    padding-top: 1.35rem;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: min(13rem, 100%);
+      height: 1px;
+      background: linear-gradient(90deg, rgba($line, 0.75), rgba($line, 0.2));
+    }
 
     span {
       color: rgba($text, 0.72);
-      font-size: 0.72rem;
+      font-size: 0.74rem;
       font-weight: 600;
       letter-spacing: 0.18em;
       text-transform: uppercase;
+    }
+
+    span:last-child {
+      position: relative;
+      width: 100%;
+      margin-top: 0.2rem;
+      padding-top: 1.05rem;
+
+      &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: min(13rem, 100%);
+        height: 1px;
+        background: linear-gradient(90deg, rgba($line, 0.75), rgba($line, 0.2));
+      }
+    }
+  }
+}
+
+@media (max-width: 1200px) {
+  .home-intro {
+    padding-bottom: 8.5rem;
+
+    &__inner {
+      grid-template-columns: minmax(0, 0.92fr) minmax(0, 1.08fr);
+      gap: 1.8rem;
+    }
+
+    &__statement {
+      max-width: 20ch;
+      font-size: clamp(1.6rem, 2.4vw, 2.15rem);
+    }
+
+    &__panel {
+      padding-top: 2.2rem;
+    }
+
+    &__content {
+      max-width: 31rem;
+
+      p {
+        max-width: 29rem;
+        font-size: 1rem;
+      }
     }
   }
 }
@@ -88,15 +130,19 @@
   .home-intro {
     &__inner {
       grid-template-columns: 1fr;
-      gap: 3rem;
+      gap: 2.2rem;
     }
 
     &__statement {
-      max-width: 12ch;
+      max-width: 18ch;
+    }
+
+    &__content {
+      max-width: none;
     }
 
     &__panel {
-      grid-template-columns: minmax(220px, 300px) minmax(0, 1fr);
+      padding-top: 0;
     }
   }
 }
@@ -106,27 +152,39 @@
     padding: 0 1rem 8rem;
 
     &__inner {
-      padding-top: 3.5rem;
-      gap: 2.25rem;
+      padding-top: 2rem;
+      gap: 2rem;
     }
 
     &__statement {
       max-width: none;
-      font-size: clamp(2rem, 8vw, 3rem);
+      font-size: clamp(1.9rem, 7vw, 2.8rem);
     }
 
     &__panel {
-      grid-template-columns: 1fr;
-      gap: 1.6rem;
       padding-top: 0;
-    }
-
-    &__media {
-      max-width: 18rem;
     }
 
     &__content p {
       max-width: none;
+    }
+
+    &__notes {
+      margin-top: 1.55rem;
+      padding-top: 1.15rem;
+
+      &::before {
+        width: min(11rem, 100%);
+      }
+
+      span:last-child {
+        margin-top: 0.15rem;
+        padding-top: 1rem;
+
+        &::before {
+          width: min(11rem, 100%);
+        }
+      }
     }
   }
 }

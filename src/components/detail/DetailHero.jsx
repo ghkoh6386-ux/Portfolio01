@@ -5,6 +5,10 @@ export default function DetailHero({ project }) {
       ? ' detail-hero--santa'
       : project.slug === 'movie-app'
         ? ' detail-hero--movie-app'
+        : project.slug === 'pages-and-place'
+          ? ' detail-hero--pages-and-place'
+          : project.slug === 'figma-archive'
+            ? ' detail-hero--figma-archive'
         : ''
   }`
 

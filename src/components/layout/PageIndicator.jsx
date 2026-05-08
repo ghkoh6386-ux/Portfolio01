@@ -2,6 +2,10 @@ import { useEffect, useMemo, useState } from 'react'
 import { useLocation } from 'react-router-dom'
 import { getProjectBySlug } from '../../data/projects'
 
+function getDisplayLabel(label) {
+  return label === 'Expertise' ? 'Skills' : label
+}
+
 function getDetailSlug(pathname) {
   const segments = pathname.split('/').filter(Boolean)
   return segments[0] === 'project' ? segments[1] : null
@@ -21,7 +25,7 @@ export default function PageIndicator() {
       return project?.title ?? 'Project Detail'
     }
 
-    return 'Archive Index'
+    return 'Portfolio Index'
   }, [isDetailPage, project])
 
   useEffect(() => {
@@ -86,7 +90,7 @@ export default function PageIndicator() {
               className={`page-indicator__item${isActive ? ' is-active' : ''}`}
             >
               <em>{String(index + 1).padStart(2, '0')}</em>
-              <strong>{label}</strong>
+              <strong>{getDisplayLabel(label)}</strong>
             </span>
           )
         })}

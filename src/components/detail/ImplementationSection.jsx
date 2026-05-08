@@ -23,6 +23,8 @@ export default function ImplementationSection({ project }) {
           ? ' detail-implementation--babymonster'
           : project.slug === 'santa'
             ? ' detail-implementation--santa'
+            : project.slug === 'figma-archive'
+              ? ' detail-implementation--figma-archive'
             : ''
       }`}
       data-page-label="Highlights"

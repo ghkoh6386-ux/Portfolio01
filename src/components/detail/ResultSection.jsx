@@ -1,4 +1,8 @@
 export default function ResultSection({ project }) {
+  if (project.slug === 'figma-archive') {
+    return null
+  }
+
   const result = project.result ?? {}
   const description =
     '각 사이트의 콘텐츠 구조, UI 설계, 페이지 기능을 상세하게 기록해둔 프로젝트 문서입니다.'

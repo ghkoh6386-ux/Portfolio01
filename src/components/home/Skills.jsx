@@ -1,33 +1,37 @@
-import useReveal from '../../hooks/useReveal'
+import useReveal from "../../hooks/useReveal";
 
 const skillColumns = [
   {
-    label: '01 / Strategy',
-    items: ['Visual Direction', 'UX Architecture', 'Editorial Design']
+    label: "01 / Front-end",
+    items: ["React", "React Router", "Tailwind CSS"],
   },
   {
-    label: '02 / Technical',
-    items: ['React / Router', 'Sass Systems', 'Motion Refinement']
+    label: "02 / Styling",
+    items: ["SCSS / Sass", "Responsive UI", "UI Publishing"],
   },
   {
-    label: '03 / Tooling',
-    items: ['Figma', 'Adobe Suite', 'Front-end Build']
-  }
-]
+    label: "03 / Tools",
+    items: ["Figma", "Photoshop", "After Effects"],
+  },
+  {
+    label: "04 / Backend",
+    items: ["Supabase", "Authentication", "CRUD Flow"],
+  },
+];
 
 export default function Skills() {
-  const { ref, visible } = useReveal()
+  const { ref, visible } = useReveal();
 
   return (
     <section
       id="skills"
       ref={ref}
       data-page-label="Expertise"
-      className={`skills-section fade-section ${visible ? 'is-visible' : ''}`}
+      className={`skills-section fade-section ${visible ? "is-visible" : ""}`}
     >
       <div className="skills-section__intro">
-        <h2>Expertise</h2>
-        <p>Building the structural foundation for modern digital experiences.</p>
+        <h2>Skills</h2>
+        <p>프로젝트 구현에 필요한 다양한 기술들을 활용하고 있습니다.</p>
       </div>
 
       <div className="skills-section__grid">
@@ -43,5 +47,5 @@ export default function Skills() {
         ))}
       </div>
     </section>
-  )
+  );
 }

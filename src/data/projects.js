@@ -1,4 +1,5 @@
 import { projects as babymonsterProjects } from './babymonster'
+import figma from './figma'
 import informationProtect from './informationProtect'
 import magazine from './magazine'
 import movieApp from './movie-app'
@@ -24,7 +25,7 @@ function normalizeProject(source, meta) {
     title: source.title,
     category: meta.category,
     shortDescription: source.hero?.description ?? source.overview?.description ?? '',
-    thumbnail: source.hero?.image ?? problem.image ?? solution.image ?? '',
+    thumbnail: source.thumbnail ?? source.hero?.image ?? problem.image ?? solution.image ?? '',
     heroImage: source.hero?.image ?? solution.image ?? problem.image ?? '',
     techStack: source.overview?.techStack ?? [],
     role: source.overview?.role ?? [],
@@ -44,7 +45,8 @@ export const projects = [
   normalizeProject(santa, { category: 'Community UI' }),
   normalizeProject(movieApp, { category: 'Movie Archive' }),
   normalizeProject(pagesAndPlace, { category: 'Travel Archive' }),
-  normalizeProject(informationProtect, { category: 'Educational Content' })
+  normalizeProject(informationProtect, { category: 'Educational Content' }),
+  normalizeProject(figma, { category: 'Figma Archive' })
 ]
 
 export function getProjectBySlug(slug) {

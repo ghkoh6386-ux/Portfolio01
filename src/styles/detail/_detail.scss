@@ -27,7 +27,7 @@
 }
 
 .detail-hero {
-  padding-top: 0;
+  padding-top: 6rem;
   padding-bottom: 7rem;
 
   &__inner {
@@ -54,6 +54,7 @@
       font-size: clamp(1.02rem, 1.5vw, 1.2rem);
       line-height: 1.9;
       color: $text-muted;
+      word-break: keep-all;
     }
   }
 
@@ -73,7 +74,7 @@
 }
 
 .detail-hero--santa {
-  padding-top: 5rem;
+  padding-top: 6rem;
 
   .detail-hero__inner {
     grid-template-columns: minmax(0, 0.82fr) minmax(520px, 1.08fr);
@@ -93,6 +94,17 @@
 
   .detail-hero__media {
     max-width: 35rem;
+  }
+}
+
+.detail-hero--pages-and-place {
+  .detail-hero__inner {
+    grid-template-columns: minmax(0, 1fr) minmax(320px, 0.7fr);
+    gap: 3.5rem;
+  }
+
+  .detail-hero__media {
+    max-width: 26rem;
   }
 }
 
@@ -132,6 +144,7 @@
     font-size: 1rem;
     line-height: 1.8;
     color: $text-muted;
+    word-break: keep-all;
   }
 
   p {
@@ -191,6 +204,7 @@
       line-height: 1.9;
       color: $text-muted;
       text-wrap: pretty;
+      word-break: keep-all;
     }
   }
 
@@ -262,6 +276,7 @@
       line-height: 1.9;
       color: $text-muted;
       text-wrap: pretty;
+      word-break: keep-all;
     }
   }
 
@@ -404,6 +419,7 @@
     color: $text-muted;
     font-size: 1rem;
     line-height: 1.85;
+    word-break: keep-all;
   }
 }
 
@@ -449,6 +465,37 @@
     img {
       width: 100%;
       height: 100%;
+    }
+  }
+}
+
+.detail-implementation--figma-archive {
+  .detail-implementation__inner {
+    gap: 2.25rem;
+  }
+
+  .detail-implementation__item {
+    align-items: flex-start;
+  }
+
+  .detail-implementation__media {
+    width: min(100%, 21rem);
+    margin-bottom: 1.8rem;
+  }
+
+  .detail-implementation__media--contain {
+    overflow: hidden;
+    border: 1px solid rgba($line, 0.65);
+    background:
+      linear-gradient(180deg, rgba($white, 0.34), rgba($white, 0.14)),
+      rgba($surface, 0.8);
+    aspect-ratio: 4 / 3;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center top;
     }
   }
 }
@@ -499,7 +546,7 @@
     line-height: 1.85;
     color: $text-muted;
     text-wrap: pretty;
-    white-space: nowrap;
+    word-break: keep-all;
   }
 
   &__button {
@@ -560,6 +607,7 @@
     letter-spacing: -0.01em;
     color: rgba(255, 255, 255, 0.82);
     text-wrap: pretty;
+    word-break: keep-all;
   }
 
   &__author {
@@ -621,17 +669,75 @@
   }
 }
 
+@media (max-width: 1280px) {
+  .detail-hero {
+    padding-top: 5.5rem;
+    padding-bottom: 6rem;
+
+    &__inner {
+      grid-template-columns: minmax(0, 1fr) minmax(280px, 0.72fr);
+      gap: 3rem;
+    }
+
+    &__copy h1 {
+      font-size: clamp(2.9rem, 6vw, 4.8rem);
+    }
+  }
+
+  .detail-overview,
+  .detail-implementation,
+  .detail-result,
+  .detail-review {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+  }
+
+  .detail-narrative,
+  .detail-solution {
+    padding-top: 5.5rem;
+    padding-bottom: 5.5rem;
+  }
+
+  .detail-narrative__body,
+  .detail-solution__inner {
+    gap: 2.5rem 3rem;
+  }
+
+  .detail-narrative--problem {
+    .detail-narrative__body {
+      grid-template-columns: minmax(260px, 0.68fr) minmax(0, 1.18fr);
+      gap: 2.5rem 3rem;
+    }
+
+    .detail-narrative__image {
+      max-width: 44rem;
+    }
+  }
+
+  .detail-implementation__inner {
+    gap: 2rem;
+  }
+}
+
 @media (max-width: 1024px) {
   .detail-hero__inner,
-  .detail-overview__inner,
-  .detail-narrative__header,
-  .detail-solution__inner,
-  .detail-implementation__inner {
+  .detail-narrative__body,
+  .detail-solution__inner {
     grid-template-columns: 1fr;
   }
 
-  .detail-result__card {
+  .detail-overview__inner {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 2rem;
+  }
+
+  .detail-overview__inner--compact {
     grid-template-columns: 1fr;
+  }
+
+  .detail-implementation__inner {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 2rem;
   }
 
   .detail-hero__media,
@@ -639,6 +745,28 @@
   .detail-solution__media {
     justify-self: start;
     max-width: none;
+  }
+
+  .detail-narrative__content,
+  .detail-solution__copy {
+    max-width: none;
+  }
+
+  .detail-narrative--problem {
+    .detail-narrative__body {
+      grid-template-columns: 1fr;
+      gap: 2rem;
+    }
+
+    .detail-narrative__content,
+    .detail-narrative__image {
+      max-width: none;
+    }
+  }
+
+  .detail-result__card {
+    padding-left: 0;
+    padding-right: 0;
   }
 
   .detail-result p {
@@ -699,6 +827,34 @@
 
   .detail-result__card {
     padding: 2rem 0 0;
+  }
+
+  .detail-overview__inner,
+  .detail-implementation__inner {
+    grid-template-columns: 1fr;
+  }
+
+  .detail-overview article {
+    padding-left: 1.1rem;
+  }
+
+  .detail-hero__copy h1 {
+    font-size: clamp(2.4rem, 9vw, 3.6rem);
+    line-height: 0.98;
+  }
+
+  .detail-narrative__title h2,
+  .detail-solution__copy h2,
+  .detail-result h3 {
+    font-size: clamp(2rem, 8vw, 3rem);
+  }
+
+  .detail-implementation article span {
+    font-size: 2.1rem;
+  }
+
+  .detail-review blockquote {
+    font-size: 1rem;
   }
 
   .detail-result__button {

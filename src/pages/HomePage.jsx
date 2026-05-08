@@ -30,9 +30,9 @@ export default function HomePage() {
       <Contact />
 
       <footer className="site-footer">
-        <div>2024 Editorial Architecturalism. All rights reserved.</div>
+        <div>2026 Portfolio All rights reserved.</div>
         <div>
-          <a href="#projects">Archive</a>
+          <a href="#projects">Project</a>
           <a href="#skills">Expertise</a>
           <a href="#contact">Contact</a>
         </div>

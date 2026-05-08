@@ -8,7 +8,7 @@ import highlight03Image from '../assets/projects/babymonster/highlight03.jpg'
 export const projects = [
   {
     slug: 'babymonster',
-    title: 'BABYMONSTER Archive',
+    title: 'BABYMONSTER',
 
     hero: {
       eyebrow: 'Featured Case Study',

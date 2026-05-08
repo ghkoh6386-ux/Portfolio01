@@ -1,5 +1,4 @@
 import useReveal from '../../hooks/useReveal'
-import profileImage from '../../assets/projects/about/profile.jpg'
 
 export default function About() {
   const { ref, visible } = useReveal()
@@ -22,23 +21,17 @@ export default function About() {
         </div>
 
         <div className="home-intro__panel">
-          <div className="home-intro__media">
-            <div className="home-intro__portrait-frame">
-              <img src={profileImage} alt="프로필 이미지" />
-            </div>
-          </div>
-
           <div className="home-intro__content">
             <p>
               디자인 의도를 화면 위에 자연스럽게 구현하는 과정에 흥미를 느낍니다.
-              구조를 정리하고, 흐름을 다듬고, 함께 일하는 사람들과 매끄럽게 호흡하는
+              구조를 정리하고 흐름을 다듬고, 함께 일하는 사람들과 매끄럽게 호흡하는
               작업을 중요하게 생각합니다.
             </p>
 
             <div className="home-intro__notes">
-              <span>Based in Seoul</span>
-              <span>Web Publishing</span>
-              <span>React / Sass / UI Markup</span>
+              <span>Creative Web Publisher</span>
+              <span>Communication & Interface Building</span>
+              <span>React / Tailwind / UI Design</span>
             </div>
           </div>
         </div>

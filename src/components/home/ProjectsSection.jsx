@@ -5,13 +5,7 @@ export default function ProjectsSection({ projects }) {
   const { ref, visible } = useReveal()
   const featureProjects = projects.slice(0, 2)
   const overlayProject = projects[2]
-  const placeholderProject = {
-    title: 'Figma Design Archive',
-    category: 'UI Design',
-    shortDescription: 'Figma 작업 데이터는 추후 연결 예정입니다.',
-    isPlaceholder: true
-  }
-  const gridProjects = [...projects.slice(3), placeholderProject]
+  const gridProjects = projects.slice(3)
 
   return (
     <section
@@ -21,8 +15,8 @@ export default function ProjectsSection({ projects }) {
       className={`projects-section fade-section ${visible ? 'is-visible' : ''}`}
     >
       <div className="projects-section__heading">
-        <h2>Selected Works</h2>
-        <span>{`01 -> ${String(gridProjects.length + 3).padStart(2, '0')}`}</span>
+        <h2>Selected Projects</h2>
+        <span>{`01 -> ${String(projects.length).padStart(2, '0')}`}</span>
       </div>
 
       <div className="projects-section__stack">
@@ -35,12 +29,7 @@ export default function ProjectsSection({ projects }) {
       {gridProjects.length > 0 && (
         <div className="projects-section__grid">
           {gridProjects.map((project, index) => (
-            <ProjectCard
-              key={project.slug ?? `placeholder-${index}`}
-              project={project}
-              variant="small"
-              index={index + 4}
-            />
+            <ProjectCard key={project.slug} project={project} variant="small" index={index + 4} />
           ))}
         </div>
       )}

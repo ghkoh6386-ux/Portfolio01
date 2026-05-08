@@ -4,14 +4,14 @@
   width: min(1360px, calc(100% - 3rem));
   margin: 0 auto 10rem;
   display: flex;
-  justify-content: space-between;
-  gap: 5rem;
+  align-items: start;
+  gap: 3.5rem;
   padding: 6rem 0 0;
   background: transparent;
   border-top: 1px solid rgba($line, 0.45);
 
   &__intro {
-    width: 32%;
+    flex: 0 0 min(24rem, 28%);
 
     h2 {
       margin: 0 0 2rem;
@@ -24,20 +24,24 @@
 
     p {
       margin: 0;
+      max-width: 20rem;
       color: $text-soft;
       font-weight: 400;
+      line-height: 1.8;
+      word-break: keep-all;
     }
   }
 
   &__grid {
-    width: 68%;
+    flex: 1 1 auto;
     display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-template-columns: repeat(4, minmax(0, 1fr));
     gap: 1.5rem;
   }
 
   &__column {
-    padding: 1.5rem 1.25rem 1.75rem;
+    min-width: 0;
+    padding: 1.45rem 1.2rem 1.7rem;
     background: rgba($surface-high, 0.55);
     border-top: 1px solid rgba($line, 0.5);
 
@@ -60,9 +64,43 @@
 
     li {
       font-family: $newsreader;
-      font-size: 1.8rem;
+      font-size: clamp(1.45rem, 1.8vw, 1.8rem);
       font-style: normal;
-      line-height: 1.15;
+      line-height: 1.18;
+    }
+  }
+}
+
+@media (max-width: 1280px) {
+  .skills-section {
+    width: min(1360px, calc(100% - 2.5rem));
+    margin-bottom: 8.5rem;
+    gap: 2.5rem;
+
+    &__intro {
+      flex-basis: min(18rem, 26%);
+    }
+
+    &__grid {
+      gap: 1.2rem;
+    }
+
+    &__column li {
+      font-size: clamp(1.3rem, 1.65vw, 1.65rem);
+    }
+  }
+}
+
+@media (max-width: 1200px) {
+  .skills-section {
+    gap: 2.75rem;
+
+    &__intro {
+      flex-basis: min(20rem, 30%);
+    }
+
+    &__grid {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
     }
   }
 }

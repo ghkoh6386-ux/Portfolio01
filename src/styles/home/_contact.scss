@@ -9,20 +9,21 @@
     display: grid;
     grid-template-columns: minmax(260px, 0.42fr) minmax(0, 1fr);
     gap: 4rem 5rem;
-    align-items: end;
+    align-items: start;
     padding-top: 2.5rem;
     border-top: 1px solid rgba($line, 0.45);
   }
 
   &__intro {
     h2 {
-      max-width: 18rem;
+      max-width: 20rem;
       margin: 0 0 1.35rem;
-      font-family: $newsreader;
-      font-size: clamp(2rem, 4vw, 3.2rem);
-      font-weight: 500;
-      line-height: 0.98;
-      letter-spacing: -0.04em;
+      font-family: $korean-display;
+      font-size: clamp(2rem, 4vw, 3rem);
+      font-weight: 300;
+      line-height: 1.12;
+      letter-spacing: -0.03em;
+      word-break: keep-all;
     }
 
     p {
@@ -37,6 +38,7 @@
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+    padding-top: 4.9rem;
   }
 
   &__mail {
@@ -84,6 +86,25 @@
   }
 }
 
+@media (max-width: 1200px) {
+  .contact-section {
+    padding-bottom: 4rem;
+
+    &__inner {
+      grid-template-columns: minmax(240px, 0.46fr) minmax(0, 1fr);
+      gap: 3rem;
+    }
+
+    &__content {
+      padding-top: 3.5rem;
+    }
+
+    &__mail {
+      font-size: clamp(2.5rem, 6vw, 5rem);
+    }
+  }
+}
+
 @media (max-width: 900px) {
   .contact-section {
     padding: 2rem 1rem 4rem;
@@ -92,6 +113,10 @@
       grid-template-columns: 1fr;
       gap: 2.5rem;
       padding-top: 2rem;
+    }
+
+    &__content {
+      padding-top: 0;
     }
 
     &__intro {

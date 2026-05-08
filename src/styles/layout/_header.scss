@@ -11,12 +11,28 @@
     width: $container;
     margin: 0 auto;
     display: flex;
+    flex-direction: row;
     justify-content: space-between;
     align-items: center;
     gap: 2rem;
   }
 
-  &__brand {
+  &__brand-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1.5rem;
+  }
+
+  &__brand-text,
+  &__logo-button {
+    border: 0;
+    padding: 0;
+    background: transparent;
+    color: $text;
+  }
+
+  &__brand-text {
     font-family: $newsreader;
     font-size: 1.35rem;
     font-style: normal;
@@ -25,11 +41,29 @@
     text-transform: uppercase;
   }
 
+  &__logo-button {
+    display: none;
+    width: 2.9rem;
+    height: 2.9rem;
+    justify-content: center;
+    flex-direction: column;
+    gap: 0.34rem;
+
+    span {
+      display: block;
+      width: 1.35rem;
+      height: 1px;
+      background: $text;
+      transition: transform 0.25s ease, opacity 0.25s ease;
+    }
+  }
+
   &__nav {
     display: flex;
     align-items: center;
     flex-wrap: nowrap;
     justify-content: flex-end;
+    align-self: center;
     gap: 1.5rem;
     max-width: none;
     padding: 0;
@@ -118,15 +152,69 @@
 
     &__inner {
       width: calc(100vw - 2rem);
-      align-items: flex-start;
+      align-items: stretch;
       flex-direction: column;
+      gap: 0;
+    }
+
+    &__brand-row {
+      position: relative;
+      z-index: 2;
+      padding-bottom: 0.15rem;
+    }
+
+    &__brand-text {
+      font-size: 1.2rem;
+    }
+
+    &__logo-button {
+      display: inline-flex;
+      width: 2.6rem;
+      height: 2.6rem;
     }
 
     &__nav {
-      flex-wrap: wrap;
-      max-width: none;
-      justify-content: flex-start;
-      gap: 0.8rem 1.2rem;
+      width: 100%;
+      max-height: 0;
+      overflow: hidden;
+      opacity: 0;
+      transform: translateY(-0.8rem);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      align-self: stretch;
+      gap: 0.9rem;
+      padding-top: 0;
+      transition: max-height 0.35s ease, opacity 0.28s ease, transform 0.35s ease,
+        padding-top 0.35s ease;
+
+      button {
+        font-size: 0.72rem;
+        letter-spacing: 0.18em;
+      }
+    }
+
+    &.is-open {
+      .site-header__logo-button {
+        span:nth-child(1) {
+          transform: translateY(0.44rem) rotate(45deg);
+        }
+
+        span:nth-child(2) {
+          opacity: 0;
+        }
+
+        span:nth-child(3) {
+          transform: translateY(-0.44rem) rotate(-45deg);
+        }
+      }
+
+      .site-header__nav {
+        max-height: 18rem;
+        opacity: 1;
+        transform: translateY(0);
+        padding-top: 1.1rem;
+      }
     }
   }
 
