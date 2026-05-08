@@ -1,11 +1,14 @@
 @use '../variables' as *;
 
 .skills-section {
+  width: min(1360px, calc(100% - 3rem));
+  margin: 0 auto 10rem;
   display: flex;
   justify-content: space-between;
   gap: 5rem;
-  padding: 8rem 1.5rem;
-  background: $surface-high;
+  padding: 6rem 0 0;
+  background: transparent;
+  border-top: 1px solid rgba($line, 0.45);
 
   &__intro {
     width: 32%;
@@ -30,10 +33,14 @@
     width: 68%;
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 3rem 2rem;
+    gap: 1.5rem;
   }
 
   &__column {
+    padding: 1.5rem 1.25rem 1.75rem;
+    background: rgba($surface-high, 0.55);
+    border-top: 1px solid rgba($line, 0.5);
+
     span {
       display: block;
       margin-bottom: 1.5rem;
@@ -63,7 +70,9 @@
 @media (max-width: 900px) {
   .skills-section {
     flex-direction: column;
-    padding: 5rem 1rem;
+    width: calc(100% - 2rem);
+    margin-bottom: 6rem;
+    padding-top: 4.5rem;
 
     &__intro,
     &__grid {

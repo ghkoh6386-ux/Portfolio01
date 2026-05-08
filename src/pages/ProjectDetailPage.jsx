@@ -20,7 +20,7 @@ export default function ProjectDetailPage() {
   const nextProject = projects[(currentIndex + 1) % projects.length]
 
   return (
-    <main className="detail-page">
+    <main id="top" className="detail-page">
       <DetailHero project={project} />
       <OverviewSection project={project} />
       <ProblemSection project={project} />
@@ -36,13 +36,13 @@ export default function ProjectDetailPage() {
         </div>
         <div className="detail-footer__links">
           <Link to={`/project/${nextProject.slug}`}>Next Project: {nextProject.title}</Link>
-          <Link to="/">Index</Link>
           <a href="#top" onClick={(event) => {
             event.preventDefault()
             window.scrollTo({ top: 0, behavior: 'smooth' })
           }}>
             Back to Top
           </a>
+          <Link to="/">HOME</Link>
         </div>
       </footer>
     </main>

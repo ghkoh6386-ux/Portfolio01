@@ -53,8 +53,7 @@
   &--feature-1 {
     .project-card__image {
       grid-column: 1 / span 6;
-      aspect-ratio: 4 / 5;
-      max-width: 42rem;
+      max-width: 37rem;
     }
 
     .project-card__content {
@@ -77,8 +76,7 @@
     .project-card__image {
       order: 2;
       grid-column: 6 / span 6;
-      aspect-ratio: 16 / 9;
-      max-width: 46rem;
+      max-width: 40rem;
       justify-self: end;
     }
   }
@@ -87,19 +85,25 @@
     display: grid;
     grid-template-columns: repeat(12, minmax(0, 1fr));
     gap: 0 2rem;
-    margin-bottom: 8rem;
+    margin-bottom: 11rem;
 
     .project-card__image {
-      grid-column: 3 / span 5;
-      aspect-ratio: 1 / 1;
-      max-width: 34rem;
+      grid-column: 2 / span 6;
+      max-width: 40rem;
+      overflow: visible;
+      background: transparent;
+      
+      img {
+        height: auto;
+        object-fit: contain;
+      }
     }
 
     .project-card__overlay {
-      grid-column: 9 / span 3;
+      grid-column: 9 / span 4;
       align-self: center;
       margin-left: 0;
-      padding: 2rem 0 2rem 1.5rem;
+      padding: 2rem 0 2rem 1rem;
       background: $background;
     }
   }
@@ -115,7 +119,9 @@
     background: $surface-high;
 
     img {
+      width: 100%;
       height: 100%;
+      display: block;
       object-fit: cover;
       transition: transform 0.7s ease;
     }
@@ -157,7 +163,7 @@
       padding-bottom: 0.45rem;
 
       &::after {
-        content: '→';
+        content: '->';
         transition: transform 0.24s ease;
       }
 
@@ -196,6 +202,10 @@
       display: block;
     }
 
+    .project-card__link--static {
+      cursor: default;
+    }
+
     .project-card__image {
       margin-bottom: 1.6rem;
       aspect-ratio: 16 / 10;
@@ -212,6 +222,35 @@
       margin: 0.8rem 0 0;
       font-size: 0.92rem;
       line-height: 1.75;
+    }
+  }
+
+  &--placeholder {
+    .project-card__image--placeholder {
+      display: grid;
+      place-items: center;
+      background:
+        linear-gradient(135deg, rgba($surface-high, 0.92), rgba($surface, 1)),
+        repeating-linear-gradient(
+          -45deg,
+          rgba($line, 0.08) 0,
+          rgba($line, 0.08) 10px,
+          transparent 10px,
+          transparent 20px
+        );
+      border: 1px solid rgba($line, 0.35);
+
+      span {
+        font-family: $newsreader;
+        font-size: clamp(2rem, 4vw, 3rem);
+        font-style: italic;
+        letter-spacing: -0.03em;
+        color: rgba($text, 0.7);
+      }
+    }
+
+    .project-card__cta {
+      color: rgba($text, 0.5);
     }
   }
 
@@ -263,5 +302,9 @@
       grid-template-columns: 1fr;
       gap: 3rem;
     }
+  }
+
+  .project-card--overlay {
+    margin-bottom: 8rem;
   }
 }

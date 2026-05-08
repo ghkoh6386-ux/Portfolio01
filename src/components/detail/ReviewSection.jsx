@@ -1,19 +1,16 @@
 export default function ReviewSection({ project }) {
+  const review = project.review ?? {}
+
   return (
-    <section className="detail-review">
+    <section className="detail-review" data-page-label="Reflection">
       <div className="detail-review__inner">
-        <div className="detail-review__quote">“</div>
-        <blockquote>{project.review}</blockquote>
+        <div className="detail-review__quote">"</div>
+        <div className="detail-review__eyebrow">{review.eyebrow ?? 'Reflection'}</div>
+        <blockquote>{review.quote ?? review.description ?? ''}</blockquote>
         <div className="detail-review__author">
-          <div className="detail-review__avatar">
-            <img
-              src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=300&q=80"
-              alt="Profile"
-            />
-          </div>
           <div>
-            <strong>Portfolio Reflection</strong>
-            <p>Design & Frontend Review Note</p>
+            <strong>{review.authorTitle ?? 'Project Reflection'}</strong>
+            <p>{review.authorDescription ?? review.description ?? ''}</p>
           </div>
         </div>
       </div>

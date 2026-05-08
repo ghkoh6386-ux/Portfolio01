@@ -22,6 +22,7 @@ export default function Skills() {
     <section
       id="skills"
       ref={ref}
+      data-page-label="Expertise"
       className={`skills-section fade-section ${visible ? 'is-visible' : ''}`}
     >
       <div className="skills-section__intro">

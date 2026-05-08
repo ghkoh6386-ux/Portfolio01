@@ -1,23 +1,35 @@
 export default function OverviewSection({ project }) {
+  const overview = project.overview ?? {}
+  const techStack = overview.techStack ?? project.techStack ?? []
+  const role = overview.role ?? project.role ?? []
+  const roleItems = Array.isArray(role) ? role : [role]
+  const showRole = project.slug === 'santa'
+
   return (
-    <section className="detail-overview">
-      <div className="detail-overview__inner">
+    <section className="detail-overview" data-page-label="Overview">
+      <div className={`detail-overview__inner ${showRole ? '' : 'detail-overview__inner--compact'}`}>
         <article>
           <span>Overview</span>
-          <p>{project.overview}</p>
+          <p>{overview.description ?? project.shortDescription}</p>
         </article>
         <article>
           <span>Tech Stack</span>
           <ul>
-            {project.techStack.map((item) => (
+            {techStack.map((item) => (
               <li key={item}>{item}</li>
             ))}
           </ul>
         </article>
-        <article>
-          <span>Role</span>
-          <p>{project.role}</p>
-        </article>
+        {showRole && (
+          <article>
+            <span>Role</span>
+            <ul>
+              {roleItems.map((item) => (
+                <li key={item}>{item}</li>
+              ))}
+            </ul>
+          </article>
+        )}
       </div>
     </section>
   )

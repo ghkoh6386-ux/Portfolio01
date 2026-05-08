@@ -1,32 +1,51 @@
 export default function ImplementationSection({ project }) {
-  const steps = [
-    {
-      label: '01',
-      title: 'Structure',
-      text: project.implementation
-    },
-    {
-      label: '02',
-      title: 'Typography',
-      text:
-        'A restrained heading system and quieter supporting copy keep the page readable while preserving the editorial tone.'
-    },
-    {
-      label: '03',
-      title: 'Scalability',
-      text:
-        'Each block is modular so future case studies can reuse the same structure with different assets and copy.'
-    }
-  ]
+  const implementation = project.implementation ?? {}
+  const items =
+    implementation.items ??
+    (implementation.description
+      ? [
+          {
+            number: '01',
+            label: implementation.title ?? 'Implementation',
+            description: implementation.description
+          }
+        ]
+      : [])
+
+  if (items.length === 0) {
+    return null
+  }
 
   return (
-    <section className="detail-implementation">
+    <section
+      className={`detail-implementation${
+        project.slug === 'babymonster'
+          ? ' detail-implementation--babymonster'
+          : project.slug === 'santa'
+            ? ' detail-implementation--santa'
+            : ''
+      }`}
+      data-page-label="Highlights"
+    >
       <div className="detail-implementation__inner">
-        {steps.map((step) => (
-          <article key={step.label}>
-            <span>{step.label}</span>
-            <h3>{step.title}</h3>
-            <p>{step.text}</p>
+        {items.map((item, index) => (
+          <article key={`${item.number ?? index}-${item.label ?? index}`} className="detail-implementation__item">
+            <div
+              className={`detail-implementation__media${item.imageFit === 'contain' ? ' detail-implementation__media--contain' : ''}`}
+              aria-label={`${item.label ?? `Highlight ${index + 1}`} image slot`}
+            >
+              {item.image ? (
+                <img src={item.image} alt={item.imageAlt ?? `${item.label ?? `Highlight ${index + 1}`} preview`} />
+              ) : (
+                <div className="detail-implementation__placeholder">
+                  <strong>{item.number ?? String(index + 1).padStart(2, '0')}</strong>
+                  <span>{`Highlight ${index + 1}`}</span>
+                </div>
+              )}
+            </div>
+            <span>{item.number ?? String(index + 1).padStart(2, '0')}</span>
+            <h3>{item.label}</h3>
+            <p>{item.description}</p>
           </article>
         ))}
       </div>

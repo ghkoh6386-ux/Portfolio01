@@ -28,14 +28,20 @@
   &__nav {
     display: flex;
     align-items: center;
-    gap: 3rem;
+    flex-wrap: nowrap;
+    justify-content: flex-end;
+    gap: 1.5rem;
+    max-width: none;
+    padding: 0;
+    border-top: 0;
 
     button {
       border: 0;
       padding: 0;
-      font-size: 0.74rem;
+      font-size: 0.68rem;
       font-weight: 500;
-      letter-spacing: 0.16em;
+      letter-spacing: 0.14em;
+      white-space: nowrap;
       text-transform: uppercase;
       opacity: 0.62;
 
@@ -43,6 +49,66 @@
         opacity: 1;
       }
     }
+  }
+}
+
+.page-indicator {
+  position: fixed;
+  top: 8.6rem;
+  right: max(1.5rem, calc((100vw - #{$container}) / 2 + 1.5rem));
+  z-index: 40;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 0.8rem;
+  pointer-events: none;
+  text-align: right;
+
+  &__context {
+    max-width: 14rem;
+    color: rgba($text, 0.45);
+    font-size: 0.66rem;
+    font-weight: 600;
+    letter-spacing: 0.24em;
+    text-transform: uppercase;
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 0.45rem;
+  }
+
+  &__item {
+    display: inline-flex;
+    align-items: baseline;
+    gap: 0.65rem;
+    max-width: 16rem;
+    color: rgba($text, 0.32);
+    transition: color 0.25s ease, transform 0.25s ease;
+
+    em {
+      font-style: normal;
+      font-size: 0.58rem;
+      font-weight: 700;
+      letter-spacing: 0.24em;
+      text-transform: uppercase;
+      opacity: 0.9;
+    }
+
+    strong {
+      font-family: $newsreader;
+      font-size: 1rem;
+      font-weight: 500;
+      letter-spacing: -0.02em;
+      line-height: 1;
+    }
+  }
+
+  .is-active {
+    color: $text;
+    transform: translateX(-0.15rem);
   }
 }
 
@@ -58,7 +124,13 @@
 
     &__nav {
       flex-wrap: wrap;
-      gap: 1rem 1.5rem;
+      max-width: none;
+      justify-content: flex-start;
+      gap: 0.8rem 1.2rem;
     }
+  }
+
+  .page-indicator {
+    display: none;
   }
 }

@@ -37,10 +37,6 @@ export default function HomePage() {
           <a href="#contact">Contact</a>
         </div>
       </footer>
-
-      <div className="frame-note frame-note--top-left">Vol. 01 Edition</div>
-      <div className="frame-note frame-note--bottom-left">Portfolio</div>
-      <div className="frame-note frame-note--bottom-right">Seoul / KR</div>
     </main>
   )
 }

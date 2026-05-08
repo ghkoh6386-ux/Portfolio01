@@ -1,94 +1,132 @@
 @use '../variables' as *;
 
 .home-intro {
-  display: grid;
-  grid-template-columns: repeat(12, minmax(0, 1fr));
-  gap: 2.5rem;
-  align-items: end;
-  padding: 0 1.5rem 14rem;
+  padding: 0 1.5rem 13rem;
 
-  &__lead {
-    grid-column: 2 / span 5;
-
-    p {
-      margin: 0;
-      font-family: $newsreader;
-      font-size: clamp(2rem, 4vw, 3.4rem);
-      line-height: 1.12;
-      letter-spacing: -0.03em;
-    }
-
-    span {
-      color: rgba($primary-soft, 0.88);
-    }
+  &__inner {
+    width: min(1360px, 100%);
+    margin: 0 auto;
+    padding-top: 4.5rem;
+    border-top: 1px solid rgba($line, 0.45);
+    display: grid;
+    grid-template-columns: minmax(0, 0.95fr) minmax(0, 1.25fr);
+    gap: 4.5rem;
+    align-items: start;
   }
 
-  &__portrait {
-    grid-column: 7 / span 2;
+  &__intro {
+    padding-top: 1rem;
+  }
+
+  &__statement {
+    max-width: 10ch;
+    margin: 0;
+    font-family: $newsreader;
+    font-size: clamp(2.3rem, 4.2vw, 4rem);
+    line-height: 1.16;
+    letter-spacing: -0.035em;
+    word-break: keep-all;
+  }
+
+  &__panel {
+    display: grid;
+    grid-template-columns: minmax(220px, 0.82fr) minmax(0, 1fr);
+    gap: 2.5rem;
+    align-items: end;
+    padding: 1.1rem 0 0;
+  }
+
+  &__media {
+    position: relative;
   }
 
   &__portrait-frame {
     aspect-ratio: 4 / 5;
-    display: flex;
-    align-items: end;
-    justify-content: flex-start;
-    padding: 1.4rem;
-    border: 1px solid rgba($line, 0.8);
-    background:
-      linear-gradient(180deg, rgba(236, 232, 225, 0.2), rgba(236, 232, 225, 0.72)),
-      linear-gradient(135deg, #efe9df, #e8e2d9);
+    overflow: hidden;
+    border: 1px solid rgba($line, 0.72);
+    background: linear-gradient(180deg, rgba(236, 232, 225, 0.2), rgba(236, 232, 225, 0.82));
 
-    span {
-      font-size: 0.7rem;
-      letter-spacing: 0.22em;
-      text-transform: uppercase;
-      opacity: 0.5;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
     }
   }
 
-  &__copy {
-    grid-column: 9 / span 4;
-    align-self: end;
+  &__content {
+    padding-bottom: 0.4rem;
 
     p {
-      max-width: 24rem;
+      max-width: 27rem;
       margin: 0;
       color: $text-soft;
-      font-size: 1.04rem;
-      font-weight: 400;
-      line-height: 1.8;
+      font-size: 1rem;
+      line-height: 1.95;
+      word-break: keep-all;
     }
   }
 
   &__notes {
     display: flex;
     flex-wrap: wrap;
-    gap: 1rem 1.4rem;
-    margin-top: 1.5rem;
+    gap: 0.85rem 1.5rem;
+    margin-top: 1.9rem;
+    padding-top: 1.4rem;
+    border-top: 1px solid rgba($line, 0.45);
 
     span {
+      color: rgba($text, 0.72);
       font-size: 0.72rem;
       font-weight: 600;
       letter-spacing: 0.18em;
       text-transform: uppercase;
-      color: $text-soft;
     }
   }
 }
 
-@media (max-width: 900px) {
+@media (max-width: 1100px) {
   .home-intro {
-    grid-template-columns: 1fr;
-    padding: 0 1rem 8rem;
-
-    &__lead,
-    &__portrait,
-    &__copy {
-      grid-column: auto;
+    &__inner {
+      grid-template-columns: 1fr;
+      gap: 3rem;
     }
 
-    &__portrait {
+    &__statement {
+      max-width: 12ch;
+    }
+
+    &__panel {
+      grid-template-columns: minmax(220px, 300px) minmax(0, 1fr);
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .home-intro {
+    padding: 0 1rem 8rem;
+
+    &__inner {
+      padding-top: 3.5rem;
+      gap: 2.25rem;
+    }
+
+    &__statement {
+      max-width: none;
+      font-size: clamp(2rem, 8vw, 3rem);
+    }
+
+    &__panel {
+      grid-template-columns: 1fr;
+      gap: 1.6rem;
+      padding-top: 0;
+    }
+
+    &__media {
       max-width: 18rem;
+    }
+
+    &__content p {
+      max-width: none;
     }
   }
 }

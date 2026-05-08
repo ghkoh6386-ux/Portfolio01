@@ -1,15 +1,24 @@
 export default function DetailHero({ project }) {
+  const hero = project.hero ?? {}
+  const heroClassName = `detail-hero${
+    project.slug === 'santa'
+      ? ' detail-hero--santa'
+      : project.slug === 'movie-app'
+        ? ' detail-hero--movie-app'
+        : ''
+  }`
+
   return (
-    <section className="detail-hero">
+    <section className={heroClassName} data-page-label="Hero">
       <div className="detail-hero__inner">
         <div className="detail-hero__copy">
-          <span className="section-kicker">Featured Case Study</span>
-          <h1>{project.title}</h1>
-          <p>{project.shortDescription}</p>
+          <span className="section-kicker">{hero.eyebrow ?? 'Featured Case Study'}</span>
+          <h1>{hero.title ?? project.title}</h1>
+          <p>{hero.description ?? project.shortDescription}</p>
         </div>
 
         <div className="detail-hero__media">
-          <img src={project.heroImage} alt={project.title} />
+          <img src={hero.image ?? project.heroImage} alt={project.title} />
         </div>
       </div>
     </section>
