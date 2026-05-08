@@ -16,7 +16,7 @@ export default function About() {
           <p className="home-intro__statement">
             사람들과의 소통을 중요하게 생각하며,
             <br />
-            다양한 시도를 즐깁니다.
+            다양한 시도를 이어갑니다. 
           </p>
         </div>
 
