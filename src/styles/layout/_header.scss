@@ -5,7 +5,9 @@
   inset: 0 0 auto;
   z-index: 50;
   padding: 2rem 1.5rem;
-  background: $background;
+  background: rgba($surface, 0.88);
+  border-bottom: 1px solid rgba($line, 0.35);
+  backdrop-filter: blur(16px);
 
   &__inner {
     width: $container;
